@@ -94,7 +94,7 @@ export default function TodoList({ initialTodos }: TodoListProps) {
               value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
               placeholder="What needs to be done?"
-              className="w-full p-4 text-[16px] rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-400 focus:border-purple-500 transition-all duration-200"
+              className="w-full p-4 text-[16px] rounded-2xl bg-white dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:outline-none transition-all duration-200 border border-gray-100 dark:border-gray-600 focus:border-gray-200 dark:focus:border-gray-500"
               required
             />
           </div>
@@ -104,12 +104,12 @@ export default function TodoList({ initialTodos }: TodoListProps) {
               value={newDescription}
               onChange={(e) => setNewDescription(e.target.value)}
               placeholder="Add details (optional)"
-              className="w-full p-4 text-[16px] rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-400 focus:border-purple-500 min-h-[120px] transition-all duration-200"
+              className="w-full p-4 text-[16px] rounded-2xl bg-white dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:outline-none min-h-[120px] transition-all duration-200 border border-gray-100 dark:border-gray-600 focus:border-gray-200 dark:focus:border-gray-500"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white text-[18px] font-semibold py-5 px-8 rounded-2xl hover:from-violet-600 hover:to-fuchsia-600 transform hover:scale-[1.02] transition-all duration-200 ease-in-out focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 shadow-lg"
+            className="w-full bg-gradient-to-r from-green-500 to-green-700 text-white text-[18px] font-semibold py-5 px-8 rounded-2xl hover:from-green-600 hover:to-green-800 transform hover:scale-[1.02] transition-all duration-200 ease-in-out focus:outline-none shadow-lg"
           >
             Add Task
           </button>
@@ -122,14 +122,10 @@ export default function TodoList({ initialTodos }: TodoListProps) {
           <button
             key={filterType}
             onClick={() => setFilter(filterType as FilterType)}
-            className={`px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-medium text-[16px] transition-all duration-200 shadow-md transform hover:scale-[1.02] ${
+            className={`px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-medium text-[16px] transition-all duration-200 shadow-md transform hover:scale-[1.02] focus:outline-none ${
               filter === filterType
-                ? filterType === 'all'
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                  : filterType === 'active'
-                  ? 'bg-gradient-to-r from-orange-500 to-pink-600 text-white'
-                  : 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white'
-                : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 hover:shadow-lg'
+                ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700'
+                : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 border-none hover:shadow-lg'
             }`}
           >
             {filterType.charAt(0).toUpperCase() + filterType.slice(1)}

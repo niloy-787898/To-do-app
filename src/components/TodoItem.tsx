@@ -69,13 +69,13 @@ export default function TodoItem({
           <div className="flex gap-3 flex-shrink-0">
             <button
               onClick={() => setIsEditing(true)}
-              className="px-5 py-2.5 text-[14px] font-medium text-white bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200"
+              className="px-5 py-2.5 text-[14px] font-medium text-white bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 focus:outline-none"
             >
               Edit
             </button>
             <button
               onClick={() => onDelete(id)}
-              className="px-5 py-2.5 text-[14px] font-medium text-white bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200"
+              className="px-5 py-2.5 text-[14px] font-medium text-white bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 focus:outline-none"
             >
               Delete
             </button>
@@ -88,7 +88,7 @@ export default function TodoItem({
               type="text"
               value={editedTitle}
               onChange={(e) => setEditedTitle(e.target.value)}
-              className="w-full p-4 text-[16px] rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-400 focus:border-purple-500 transition-all duration-200"
+              className="w-full p-4 text-[16px] rounded-2xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none transition-all duration-200 border border-gray-100 dark:border-gray-600 focus:border-gray-200 dark:focus:border-gray-500"
               placeholder="Task title"
             />
           </div>
@@ -96,20 +96,20 @@ export default function TodoItem({
             <textarea
               value={editedDescription}
               onChange={(e) => setEditedDescription(e.target.value)}
-              className="w-full p-4 text-[16px] rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-400 focus:border-purple-500 min-h-[120px] transition-all duration-200"
+              className="w-full p-4 text-[16px] rounded-2xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none min-h-[120px] transition-all duration-200 border border-gray-100 dark:border-gray-600 focus:border-gray-200 dark:focus:border-gray-500"
               placeholder="Task description"
             />
           </div>
           <div className="flex justify-end gap-4">
             <button
               onClick={handleSubmit}
-              className="px-6 py-3 text-[14px] font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200"
+              className="px-6 py-3 text-[14px] font-medium text-white bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 focus:outline-none"
             >
               Save
             </button>
             <button
               onClick={() => setIsEditing(false)}
-              className="px-6 py-3 text-[14px] font-medium bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200"
+              className="px-6 py-3 text-[14px] font-medium text-white bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 focus:outline-none"
             >
               Cancel
             </button>

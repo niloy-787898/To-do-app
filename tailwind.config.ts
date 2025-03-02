@@ -14,9 +14,11 @@ const config: Config = {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)'],
-        mono: ['var(--font-mono)'],
+        inter: ['var(--font-inter)'],
         poppins: ['var(--font-poppins)'],
+      },
+      backgroundImage: {
+        'green-gradient': 'linear-gradient(to right, #22c55e, #16a34a)',
       },
     },
   },
